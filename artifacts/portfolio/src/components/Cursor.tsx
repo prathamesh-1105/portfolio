@@ -77,7 +77,7 @@ export function Cursor() {
             borderColor: hovering ? "hsl(270,70%,65%)" : "rgba(115,152,173,0.45)",
             transform: `scale(${hovering ? 1.6 : clicking ? 0.7 : 1})`,
             transition: "transform 0.2s ease, border-color 0.2s ease",
-            boxShadow: hovering ? "0 0 14px 2px rgba(168,85,247,0.25)" : "none",
+            boxShadow: hovering ? "0 0 14px 2px rgba(137,173,210,0.25)" : "none",
           }}
         />
       </div>
