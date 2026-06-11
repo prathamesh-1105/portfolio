@@ -1,0 +1,563 @@
+BUILD A WORLD-CLASS, AWWWARDS-LEVEL PORTFOLIO WEBSITE FOR PRATHAMESH KAMBLI
+
+MISSION
+
+Create a portfolio that does not feel like a student portfolio.
+
+It should feel like the digital headquarters of a future AI Engineer, Product Builder, and technology creator.
+
+The website must leave visitors thinking:
+
+"Prathamesh doesn't just code. He builds experiences."
+
+and
+
+"This person has the mindset to build products, startups, and innovative technology."
+
+CORE PERSONAL BRAND
+
+Name:
+PRATHAMESH KAMBLI
+
+Role:
+AI Engineer & Product Builder
+
+Primary Tagline:
+Turning ideas into intelligent digital experiences.
+
+Secondary Tagline:
+Exploring the intersection of AI, design, engineering, and innovation.
+
+DESIGN PHILOSOPHY
+
+Blend:
+
+* Apple-level minimalism
+* Space exploration aesthetics
+* Modern AI interfaces
+* Cinematic storytelling
+* Premium product-launch experiences
+* Luxury futuristic motion design
+
+The entire website should feel like entering Prathamesh's personal universe.
+
+VISUAL STYLE
+
+Theme:
+APPLE + SPACE
+
+Color Palette:
+
+* Deep Space Black (#050505)
+* Cosmic Blue
+* Nebula Purple
+* Starlight White
+* Subtle Glassmorphism
+* Soft futuristic glow
+
+Typography:
+
+* Large cinematic headings
+* Premium modern fonts
+* Strong hierarchy
+* Elegant spacing
+* Clean Apple-style layout
+
+TECH STACK
+
+* Next.js 15
+* React
+* TypeScript
+* Tailwind CSS
+* Framer Motion
+* GSAP ScrollTrigger
+* Three.js
+* React Three Fiber
+* Lenis Smooth Scroll
+
+PERFORMANCE
+
+* 60 FPS animations
+* Mobile-first responsive design
+* SEO optimized
+* Lighthouse score above 90
+* Lazy loading
+* Accessibility friendly
+* Smooth on low-end devices
+
+LOADING EXPERIENCE
+
+Create a cinematic startup sequence.
+
+Display:
+
+INITIALIZING PRATHAMESH UNIVERSE
+
+Show:
+
+* Animated stars appearing
+* Loading percentage from 0 to 100
+* Digital system boot sequence
+* Cosmic sound-inspired visuals
+* Mission control interface
+
+When loading completes:
+
+Camera flies through a galaxy and lands on the Hero Section.
+
+HERO SECTION (MOST IMPORTANT)
+
+CRITICAL REQUIREMENT:
+
+Use the exact uploaded photograph of Prathamesh as the hero image.
+
+DO NOT:
+
+* Replace it
+* Stylize it into AI art
+* Generate another person
+* Convert it into a cartoon
+
+Keep it as the real photograph.
+
+Image Treatment:
+
+* Remove background cleanly
+* Preserve facial features exactly
+* Preserve body proportions exactly
+* Add cinematic rim lighting
+* Add blue and purple cosmic glow behind the subject
+* Add floating particles
+* Add subtle space fog
+* Add premium Apple-style image processing
+
+Image Position:
+
+* Large hero visual
+* Occupies 40–50% of viewport
+* Main focal point of page
+
+Interactive Effects:
+
+* Mouse-reactive parallax
+* Subtle 3D movement
+* Dynamic spotlight following cursor
+* Floating cosmic particles
+* Smooth scroll transformations
+
+Layout:
+
+LEFT SIDE
+
+Large cinematic portrait
+
+RIGHT SIDE
+
+PRATHAMESH KAMBLI
+
+AI Engineer & Product Builder
+
+Turning ideas into intelligent digital experiences.
+
+Buttons:
+
+Explore My Universe
+
+View My Work
+
+Background:
+
+* Animated stars
+* Moving constellations
+* Nebula effects
+* Space grid
+* Dynamic depth layers
+
+Animated scroll indicator.
+
+SCROLL EXPERIENCE
+
+Scrolling should feel like travelling through space.
+
+Create:
+
+* Smooth transitions
+* Camera movement
+* Parallax layers
+* Motion storytelling
+* Scroll-triggered reveals
+* Scale transformations
+* Blur transitions
+* Seamless section transitions
+
+Each section should feel connected.
+
+SECTION 1 — MY JOURNEY
+
+Create an interactive space mission timeline.
+
+Timeline:
+
+2020
+Completed SSC
+
+2022
+Completed HSC
+
+2023
+Started B.E. Computer Engineering (AI & Data Science)
+
+2024
+Explored Web Development and UI/UX
+
+2025
+Building AI and Product Development Skills
+
+2027
+Future AI Engineer & Product Creator
+
+Timeline should animate like a spaceship route.
+
+SECTION 2 — WHO I AM
+
+No boring resume text.
+
+Tell a story.
+
+Present Prathamesh as:
+
+* AI & Data Science Student
+* Product Builder
+* Web Developer
+* Designer
+* Innovator
+* Problem Solver
+* Lifelong Learner
+
+Use:
+
+* Line-by-line text reveals
+* Floating glass cards
+* Dynamic animations
+* Storytelling layout
+
+Create a second appearance of the uploaded image.
+
+Transform it into a holographic version during scroll.
+
+SECTION 3 — TECH ARSENAL
+
+Create a futuristic command center.
+
+Categories:
+
+Programming
+
+* Python
+* Java
+* C++
+* JavaScript
+
+Web Development
+
+* HTML
+* CSS
+* Responsive Design
+
+AI & Data
+
+* AI Tools
+* Data Analytics
+* Power BI
+
+Platforms & Tools
+
+* Git
+* GitHub
+* Figma
+* VS Code
+* Postman
+* Vercel
+
+Visuals:
+
+* Interactive radar chart
+* Floating skill nodes
+* Hover glow effects
+* Animated reveals
+* Dynamic connections between skills
+
+SECTION 4 — FEATURED PROJECTS
+
+Present projects as startup launches.
+
+PROJECT 1 — CELESTIAL EXPLORER
+
+FLAGSHIP PROJECT
+
+This should be the most impressive section of the entire website.
+
+Visual Experience:
+
+* Orbiting planets
+* Cosmic particles
+* Solar system animations
+* Space transitions
+* Interactive galaxy
+
+Show:
+
+Overview
+
+Problem
+
+Solution
+
+Features
+
+Technologies
+
+Future Vision
+
+Buttons:
+
+Live Demo
+
+GitHub Repository
+
+The section should feel like exploring a digital galaxy.
+
+PROJECT 2 — QUICKBITE
+
+Present as a food-tech startup.
+
+Visuals:
+
+* Animated phone mockups
+* Delivery tracking animation
+* Dynamic UI transitions
+* Modern startup presentation
+
+Show:
+
+Vision
+
+Features
+
+Technology
+
+Roadmap
+
+PROJECT 3 — KALABHOOMI
+
+Present as a real-world deployed project.
+
+Visuals:
+
+* Elegant cultural aesthetics
+* Stage-inspired transitions
+* Interactive gallery
+* Showcase animations
+
+Show:
+
+Overview
+
+Features
+
+Live Website
+
+Impact
+
+SECTION 5 — CURRENTLY BUILDING
+
+Create futuristic holographic cards.
+
+CARD 1
+
+AI CLONE
+
+Status:
+IN DEVELOPMENT
+
+Description:
+
+Personal AI assistant capable of answering questions about Prathamesh, projects, skills, experience, and goals.
+
+CARD 2
+
+DARSHAN
+
+Status:
+IN DEVELOPMENT
+
+Description:
+
+Temple discovery platform using geolocation, weather integration, and intelligent information systems.
+
+Use glowing futuristic construction effects.
+
+SECTION 6 — CURRENT MISSION
+
+Create a live mission control dashboard.
+
+Current Focus:
+
+* Building Celestial Explorer
+* Learning AI Engineering
+* Exploring Product Development
+* Teaching Students
+* Participating in Technical Events
+* Expanding Technical Skills
+
+Display as a futuristic control center.
+
+SECTION 7 — BEYOND ENGINEERING
+
+Show the human side.
+
+Categories:
+
+Art & Painting
+
+Music & Singing
+
+Teaching
+
+Technology & Innovation
+
+Social Work
+
+Use premium interactive cards with animations.
+
+SECTION 8 — CERTIFICATIONS & ACHIEVEMENTS
+
+Create floating achievement modules.
+
+Include:
+
+* GenAI Powered Data Analytics
+* Introduction to UX Design
+* Python Programming
+* Java Programming
+* Power BI
+* HTML/CSS/JavaScript
+* Git & GitHub
+
+Use premium reveal animations.
+
+SECTION 9 — ASK MY AI CLONE
+
+Create a premium AI chat experience.
+
+This section should feel like ChatGPT meets Iron Man's JARVIS.
+
+Users can ask:
+
+Who is Prathamesh?
+
+What technologies does he know?
+
+Tell me about Celestial Explorer.
+
+What are his future goals?
+
+What projects has he built?
+
+The AI should answer using portfolio content.
+
+Modern AI interface.
+
+Beautiful animations.
+
+Typing effects.
+
+Voice-inspired visual feedback.
+
+SECTION 10 — FUTURE VISION
+
+Title:
+
+MISSION 2030
+
+Create an interstellar roadmap.
+
+Milestones:
+
+Become AI Engineer
+
+Build Innovative Products
+
+Launch Startup
+
+Create Technology That Impacts Lives
+
+Represent roadmap as a journey through space.
+
+SECTION 11 — CONTACT
+
+Create a futuristic communication center.
+
+Features:
+
+* Glassmorphism contact form
+* Magnetic buttons
+* Animated send interaction
+* Particle background
+* Premium hover effects
+
+Include:
+
+Email
+
+GitHub
+
+LinkedIn
+
+FINAL EXPERIENCE
+
+As visitors reach the end:
+
+The camera slowly zooms out.
+
+All sections merge into a giant galaxy.
+
+Stars align into a constellation.
+
+Final Message:
+
+THE JOURNEY HAS ONLY BEGUN
+
+Then reveal:
+
+PRATHAMESH KAMBLI
+
+AI Engineer & Product Builder
+
+Turning ideas into intelligent digital experiences.
+
+SPECIAL EFFECTS
+
+* Mouse glow
+* Magnetic buttons
+* Premium cursor
+* Floating particles
+* Dynamic stars
+* Glassmorphism
+* Motion blur
+* Smooth page transitions
+* Scroll storytelling
+* Premium lighting effects
+* Cinematic reveals
+* Dynamic depth
+* Interactive backgrounds
+* Subtle sound-reactive visual effects
+* Galaxy transitions
+
+IMPORTANT FINAL RULE
+
+This website must feel like a premium technology product launch, not a resume.
+
+Every section should create wonder, curiosity, and excitement.
+
+The final result should be memorable enough that visitors remember Prathamesh long after leaving the website.
