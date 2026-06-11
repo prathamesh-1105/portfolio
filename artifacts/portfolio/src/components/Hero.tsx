@@ -160,21 +160,20 @@ export function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.4, delay: 0.2, ease: "easeOut" }}
         >
-          {/* Glow behind the figure */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-2/3 rounded-full bg-primary/20 blur-[80px] pointer-events-none" />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-1/2 rounded-full bg-secondary/15 blur-[60px] pointer-events-none" />
+          {/* Very subtle glow behind the figure */}
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-1/2 rounded-full bg-primary/8 blur-[70px] pointer-events-none" />
 
-          {/* Photo — transparent BG, tall */}
+          {/* Photo — transparent BG, full height */}
           <motion.img
             src={prathameshPhoto}
             alt="Prathamesh Kambli"
             className="relative z-10 w-auto select-none"
             style={{
-              height: "min(90vh, 700px)",
+              height: "min(105vh, 820px)",
               maxWidth: "100%",
               objectFit: "contain",
               objectPosition: "bottom",
-              filter: "drop-shadow(0 0 40px rgba(99,102,241,0.35)) drop-shadow(0 0 80px rgba(168,85,247,0.15))",
+              filter: "drop-shadow(0 0 12px rgba(99,102,241,0.18))",
             }}
             drag={false}
           />
