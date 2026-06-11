@@ -2,51 +2,99 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export function Cursor() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
+  const [pos, setPos] = useState({ x: -100, y: -100 });
+  const [trail, setTrail] = useState({ x: -100, y: -100 });
+  const [clicking, setClicking] = useState(false);
+  const [hovering, setHovering] = useState(false);
 
   useEffect(() => {
-    const updateMousePosition = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+    const onMove = (e: MouseEvent) => {
+      setPos({ x: e.clientX, y: e.clientY });
+    };
+    const onDown = () => setClicking(true);
+    const onUp = () => setClicking(false);
+    const onOver = (e: MouseEvent) => {
+      setHovering(!!(e.target as HTMLElement).closest("button, a, input, textarea, [data-interactive]"));
     };
 
-    const handleMouseOver = (e: MouseEvent) => {
-      if ((e.target as HTMLElement).closest('button, a, input, textarea, select, [data-interactive="true"]')) {
-        setIsHovering(true);
-      } else {
-        setIsHovering(false);
-      }
-    };
-
-    window.addEventListener("mousemove", updateMousePosition);
-    window.addEventListener("mouseover", handleMouseOver);
-
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mousedown", onDown);
+    window.addEventListener("mouseup", onUp);
+    window.addEventListener("mouseover", onOver);
     return () => {
-      window.removeEventListener("mousemove", updateMousePosition);
-      window.removeEventListener("mouseover", handleMouseOver);
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mousedown", onDown);
+      window.removeEventListener("mouseup", onUp);
+      window.removeEventListener("mouseover", onOver);
     };
   }, []);
 
+  useEffect(() => {
+    let raf: number;
+    const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+    const animate = () => {
+      setTrail((prev) => ({
+        x: lerp(prev.x, pos.x, 0.1),
+        y: lerp(prev.y, pos.y, 0.1),
+      }));
+      raf = requestAnimationFrame(animate);
+    };
+    raf = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(raf);
+  }, [pos]);
+
   return (
     <>
+      {/* Dot — snaps to cursor */}
       <motion.div
-        className="fixed top-0 left-0 w-4 h-4 bg-primary rounded-full pointer-events-none z-[9999] mix-blend-screen"
+        className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-screen"
         animate={{
-          x: mousePosition.x - 8,
-          y: mousePosition.y - 8,
-          scale: isHovering ? 2.5 : 1,
+          x: pos.x - 4,
+          y: pos.y - 4,
+          scale: clicking ? 0.5 : 1,
         }}
-        transition={{ type: "spring", stiffness: 500, damping: 28, mass: 20 }}
-      />
-      <motion.div
-        className="fixed top-0 left-0 w-32 h-32 border border-secondary rounded-full pointer-events-none z-[9998] opacity-30"
-        animate={{
-          x: mousePosition.x - 64,
-          y: mousePosition.y - 64,
-          scale: isHovering ? 1.5 : 1,
+        transition={{ type: "spring", stiffness: 800, damping: 35 }}
+        style={{ width: 8, height: 8 }}
+      >
+        <div
+          className="w-full h-full rounded-full"
+          style={{ background: "hsl(217,91%,70%)", boxShadow: "0 0 8px 2px hsl(217,91%,60%)" }}
+        />
+      </motion.div>
+
+      {/* Ring — lags smoothly behind */}
+      <div
+        className="fixed top-0 left-0 pointer-events-none z-[9998]"
+        style={{
+          transform: `translate(${trail.x - 20}px, ${trail.y - 20}px)`,
+          width: 40,
+          height: 40,
         }}
-        transition={{ type: "spring", stiffness: 100, damping: 30, mass: 50 }}
+      >
+        <div
+          className="w-full h-full rounded-full border transition-all duration-200"
+          style={{
+            borderColor: hovering ? "hsl(270,70%,65%)" : "rgba(99,102,241,0.45)",
+            transform: `scale(${hovering ? 1.6 : clicking ? 0.7 : 1})`,
+            transition: "transform 0.2s ease, border-color 0.2s ease",
+            boxShadow: hovering ? "0 0 14px 2px rgba(168,85,247,0.25)" : "none",
+          }}
+        />
+      </div>
+
+      {/* Glow trail */}
+      <div
+        className="fixed top-0 left-0 pointer-events-none z-[9997] rounded-full"
+        style={{
+          width: 120,
+          height: 120,
+          transform: `translate(${trail.x - 60}px, ${trail.y - 60}px)`,
+          background: "radial-gradient(circle, rgba(99,102,241,0.07) 0%, transparent 70%)",
+          transition: "transform 0.05s linear",
+        }}
       />
+
+      <style>{`* { cursor: none !important; }`}</style>
     </>
   );
 }
