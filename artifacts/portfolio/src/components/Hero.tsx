@@ -97,10 +97,34 @@ export function Hero() {
 
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background z-1 pointer-events-none" />
 
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-24">
+      {/* RIGHT: Photo — absolutely placed, anchored to bottom-right, grows upward */}
+      <motion.div
+        className="absolute bottom-0 right-0 z-5 pointer-events-none"
+        style={{ x: imgX, y: imgY }}
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.4, delay: 0.2, ease: "easeOut" }}
+      >
+        {/* Subtle glow */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-1/3 rounded-full bg-primary/10 blur-[60px] pointer-events-none" />
+        <img
+          src={prathameshPhoto}
+          alt="Prathamesh Kambli"
+          className="relative z-10 w-auto select-none block"
+          style={{
+            height: "100vh",
+            maxHeight: "100vh",
+            objectFit: "contain",
+            objectPosition: "bottom",
+            filter: "drop-shadow(0 0 10px rgba(99,102,241,0.15))",
+          }}
+          draggable={false}
+        />
+      </motion.div>
 
-        {/* LEFT: Content */}
-        <div className="text-center lg:text-left order-last lg:order-first">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 min-h-screen flex items-center">
+        {/* LEFT: Content — only takes left half */}
+        <div className="w-full lg:w-1/2 text-center lg:text-left">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -151,58 +175,6 @@ export function Hero() {
             </div>
           </motion.div>
         </div>
-
-        {/* RIGHT: Photo — no background, covers ~50% screen height */}
-        <motion.div
-          className="order-first lg:order-last relative flex justify-center items-end"
-          style={{ x: imgX, y: imgY }}
-          initial={{ opacity: 0, scale: 0.92 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.4, delay: 0.2, ease: "easeOut" }}
-        >
-          {/* Very subtle glow behind the figure */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-1/2 rounded-full bg-primary/8 blur-[70px] pointer-events-none" />
-
-          {/* Photo — transparent BG, full height */}
-          <motion.img
-            src={prathameshPhoto}
-            alt="Prathamesh Kambli"
-            className="relative z-10 w-auto select-none"
-            style={{
-              height: "min(105vh, 820px)",
-              maxWidth: "100%",
-              objectFit: "contain",
-              objectPosition: "bottom",
-              filter: "drop-shadow(0 0 12px rgba(99,102,241,0.18))",
-            }}
-            drag={false}
-          />
-
-          {/* Floating particles */}
-          {[...Array(5)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1.5 h-1.5 rounded-full bg-primary/80 z-20"
-              style={{
-                top: `${20 + i * 14}%`,
-                left: i % 2 === 0 ? "2%" : "92%",
-                boxShadow: "0 0 6px rgba(99,102,241,0.9)",
-              }}
-              animate={{ y: [0, -14, 0], opacity: [0.4, 1, 0.4] }}
-              transition={{ duration: 2.5 + i * 0.4, repeat: Infinity, delay: i * 0.35, ease: "easeInOut" }}
-            />
-          ))}
-
-          {/* Name badge */}
-          <motion.div
-            className="absolute bottom-2 left-1/2 -translate-x-1/2 px-5 py-2 rounded-full border border-white/10 bg-background/70 backdrop-blur-sm whitespace-nowrap z-20"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2 }}
-          >
-            <span className="font-mono text-xs text-white/50 tracking-widest">PRATHAMESH.AI</span>
-          </motion.div>
-        </motion.div>
       </div>
 
       {/* Scroll indicator */}
