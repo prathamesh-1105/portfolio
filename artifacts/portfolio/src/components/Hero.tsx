@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
-import prathameshPhoto from "@assets/DSC_0488_1781183171217.jpg";
+import prathameshPhoto from "@assets/prathamesh_nobg.png";
 
 function StarCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -152,69 +152,57 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* RIGHT: Photo */}
+        {/* RIGHT: Photo — no background, covers ~50% screen height */}
         <motion.div
-          className="order-first lg:order-last relative flex justify-center"
-          style={{ rotateX, rotateY, transformStyle: "preserve-3d", x: imgX, y: imgY }}
-          initial={{ opacity: 0, scale: 0.85 }}
+          className="order-first lg:order-last relative flex justify-center items-end"
+          style={{ x: imgX, y: imgY }}
+          initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.4, delay: 0.2, ease: "easeOut" }}
         >
-          <div className="relative">
-            {/* Glow rings */}
-            <div className="absolute -inset-8 rounded-full border border-primary/15 animate-[spin_18s_linear_infinite]" />
-            <div className="absolute -inset-16 rounded-full border border-secondary/10 animate-[spin_30s_linear_infinite_reverse]" />
-            <div className="absolute -inset-24 rounded-full border border-white/5 animate-[spin_45s_linear_infinite]" />
+          {/* Glow behind the figure */}
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-2/3 rounded-full bg-primary/20 blur-[80px] pointer-events-none" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-1/2 rounded-full bg-secondary/15 blur-[60px] pointer-events-none" />
 
-            {/* Photo container */}
-            <div className="relative w-64 h-80 sm:w-80 sm:h-96 md:w-[340px] md:h-[440px] rounded-3xl overflow-hidden">
-              <img
-                src={prathameshPhoto}
-                alt="Prathamesh Kambli"
-                className="w-full h-full object-cover object-top"
-                style={{
-                  filter: "contrast(1.05) brightness(0.88) saturate(0.9)",
-                }}
-              />
-              {/* Cosmic overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-transparent to-secondary/20 mix-blend-screen" />
-              <div className="absolute inset-0 rounded-3xl border border-white/10" />
-            </div>
+          {/* Photo — transparent BG, tall */}
+          <motion.img
+            src={prathameshPhoto}
+            alt="Prathamesh Kambli"
+            className="relative z-10 w-auto select-none"
+            style={{
+              height: "min(90vh, 700px)",
+              maxWidth: "100%",
+              objectFit: "contain",
+              objectPosition: "bottom",
+              filter: "drop-shadow(0 0 40px rgba(99,102,241,0.35)) drop-shadow(0 0 80px rgba(168,85,247,0.15))",
+            }}
+            drag={false}
+          />
 
-            {/* Floating particles */}
-            {[...Array(6)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-1.5 h-1.5 rounded-full bg-primary/80"
-                style={{
-                  top: `${15 + i * 13}%`,
-                  left: i % 2 === 0 ? "-8%" : "108%",
-                  boxShadow: "0 0 6px rgba(99,102,241,0.8)",
-                }}
-                animate={{
-                  y: [0, -16, 0],
-                  opacity: [0.4, 1, 0.4],
-                }}
-                transition={{
-                  duration: 2.5 + i * 0.4,
-                  repeat: Infinity,
-                  delay: i * 0.35,
-                  ease: "easeInOut",
-                }}
-              />
-            ))}
-
-            {/* Name badge below photo */}
+          {/* Floating particles */}
+          {[...Array(5)].map((_, i) => (
             <motion.div
-              className="absolute -bottom-5 left-1/2 -translate-x-1/2 px-5 py-2 rounded-full border border-white/10 bg-background/80 backdrop-blur-sm whitespace-nowrap"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2 }}
-            >
-              <span className="font-mono text-xs text-white/50 tracking-widest">PRATHAMESH.AI</span>
-            </motion.div>
-          </div>
+              key={i}
+              className="absolute w-1.5 h-1.5 rounded-full bg-primary/80 z-20"
+              style={{
+                top: `${20 + i * 14}%`,
+                left: i % 2 === 0 ? "2%" : "92%",
+                boxShadow: "0 0 6px rgba(99,102,241,0.9)",
+              }}
+              animate={{ y: [0, -14, 0], opacity: [0.4, 1, 0.4] }}
+              transition={{ duration: 2.5 + i * 0.4, repeat: Infinity, delay: i * 0.35, ease: "easeInOut" }}
+            />
+          ))}
+
+          {/* Name badge */}
+          <motion.div
+            className="absolute bottom-2 left-1/2 -translate-x-1/2 px-5 py-2 rounded-full border border-white/10 bg-background/70 backdrop-blur-sm whitespace-nowrap z-20"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2 }}
+          >
+            <span className="font-mono text-xs text-white/50 tracking-widest">PRATHAMESH.AI</span>
+          </motion.div>
         </motion.div>
       </div>
 
