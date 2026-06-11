@@ -95,7 +95,7 @@ export function WhoIAm() {
                 className="w-full h-full object-cover rounded-2xl"
                 style={{
                   filter: "saturate(0.7) contrast(1.1) brightness(0.9)",
-                  boxShadow: "0 0 60px rgba(66,108,132,0.3), 0 0 120px rgba(168,85,247,0.15)",
+                  boxShadow: "0 0 60px rgba(17,51,71,0.3), 0 0 120px rgba(168,85,247,0.15)",
                 }}
               />
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-secondary/30 via-transparent to-primary/20 mix-blend-screen pointer-events-none" />

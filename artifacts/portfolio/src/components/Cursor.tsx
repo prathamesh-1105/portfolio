@@ -74,7 +74,7 @@ export function Cursor() {
         <div
           className="w-full h-full rounded-full border transition-all duration-200"
           style={{
-            borderColor: hovering ? "hsl(270,70%,65%)" : "rgba(66,108,132,0.45)",
+            borderColor: hovering ? "hsl(270,70%,65%)" : "rgba(17,51,71,0.45)",
             transform: `scale(${hovering ? 1.6 : clicking ? 0.7 : 1})`,
             transition: "transform 0.2s ease, border-color 0.2s ease",
             boxShadow: hovering ? "0 0 14px 2px rgba(168,85,247,0.25)" : "none",
@@ -89,7 +89,7 @@ export function Cursor() {
           width: 120,
           height: 120,
           transform: `translate(${trail.x - 60}px, ${trail.y - 60}px)`,
-          background: "radial-gradient(circle, rgba(66,108,132,0.07) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(17,51,71,0.07) 0%, transparent 70%)",
           transition: "transform 0.05s linear",
         }}
       />
