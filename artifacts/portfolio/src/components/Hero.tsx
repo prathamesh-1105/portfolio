@@ -105,18 +105,19 @@ export function Hero() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.4, delay: 0.2, ease: "easeOut" }}
       >
-        {/* Subtle glow */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-1/3 rounded-full bg-primary/10 blur-[60px] pointer-events-none" />
         <img
           src={prathameshPhoto}
           alt="Prathamesh Kambli"
           className="relative z-10 w-auto select-none block"
           style={{
-            height: "100vh",
-            maxHeight: "100vh",
+            height: "118vh",
+            maxHeight: "118vh",
             objectFit: "contain",
             objectPosition: "bottom",
-            filter: "drop-shadow(0 0 10px rgba(99,102,241,0.15))",
+            maskImage: "linear-gradient(to right, transparent 0%, black 18%, black 80%, transparent 100%), linear-gradient(to top, black 75%, transparent 100%)",
+            maskComposite: "intersect",
+            WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 18%, black 80%, transparent 100%), linear-gradient(to top, black 75%, transparent 100%)",
+            WebkitMaskComposite: "source-in",
           }}
           draggable={false}
         />
