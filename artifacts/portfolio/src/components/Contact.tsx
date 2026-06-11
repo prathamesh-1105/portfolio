@@ -13,9 +13,9 @@ export function Contact() {
   };
 
   const LINKS = [
-    { label: "EMAIL", value: "prathamesh@example.com", href: "mailto:prathamesh@example.com", icon: "✉" },
-    { label: "GITHUB", value: "github.com/prathamesh", href: "https://github.com", icon: "⌥" },
-    { label: "LINKEDIN", value: "linkedin.com/in/prathamesh", href: "https://linkedin.com", icon: "◉" },
+    { label: "EMAIL", value: "prathameshkambli1nov@gmail.com", href: "mailto:prathameshkambli1nov@gmail.com", icon: "✉" },
+    { label: "GITHUB", value: "github.com/prathamesh-1105", href: "https://github.com/prathamesh-1105", icon: "⌥" },
+    { label: "LINKEDIN", value: "linkedin.com/in/prathamesh-kambli", href: "https://www.linkedin.com/in/prathamesh-kambli", icon: "◉" },
   ];
 
   return (
