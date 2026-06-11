@@ -90,7 +90,7 @@ export function Hero() {
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.03]"
         style={{
-          backgroundImage: `linear-gradient(rgba(99,102,241,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.5) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(66,108,132,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(66,108,132,0.5) 1px, transparent 1px)`,
           backgroundSize: "60px 60px",
         }}
       />
@@ -156,9 +156,9 @@ export function Hero() {
               <motion.a
                 href="#journey"
                 onClick={(e) => { e.preventDefault(); document.querySelector("#journey")?.scrollIntoView({ behavior: "smooth" }); }}
-                whileHover={{ scale: 1.04, boxShadow: "0 0 30px rgba(99,102,241,0.4)" }}
+                whileHover={{ scale: 1.04, boxShadow: "0 0 30px rgba(66,108,132,0.4)" }}
                 whileTap={{ scale: 0.97 }}
-                className="px-8 py-4 bg-primary text-white font-semibold rounded-full text-sm tracking-wide shadow-[0_0_20px_rgba(99,102,241,0.3)] transition-all cursor-pointer"
+                className="px-8 py-4 bg-primary text-white font-semibold rounded-full text-sm tracking-wide shadow-[0_0_20px_rgba(66,108,132,0.3)] transition-all cursor-pointer"
                 data-testid="button-explore"
               >
                 Explore My Universe
