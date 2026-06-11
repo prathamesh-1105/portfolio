@@ -68,13 +68,10 @@ export function Hero() {
   const { scrollY } = useScroll();
 
   // Scroll animations for hologram mic-drop sequence
-  const maskOpacity = useTransform(scrollY, [0, 100], [0, 1]);
-  const fistOpacity = useTransform(scrollY, [0, 100, 100, 180], [0, 1, 1, 0]);
-  const openHandOpacity = useTransform(scrollY, [100, 180, 400], [0, 1, 0.4]);
-  const micY = useTransform(scrollY, [180, 350], [0, 200]);
-  const micRotate = useTransform(scrollY, [180, 350], [0, 25]);
-  const micOpacity = useTransform(scrollY, [180, 350], [1, 0]);
-  const micClipY = useTransform(scrollY, [200, 350], [0, 100]);
+  const micOpacity = useTransform(scrollY, [0, 80, 150, 300], [0, 1, 1, 0]);
+  const micY = useTransform(scrollY, [80, 300], [0, 200]);
+  const micRotate = useTransform(scrollY, [80, 300], [0, 30]);
+  const micClipY = useTransform(scrollY, [120, 300], [0, 100]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -129,72 +126,10 @@ export function Hero() {
           draggable={false}
         />
 
-        {/* 1. Photo hand mask: fades in to background color over physical hand */}
-        <motion.div
-          className="absolute top-[53.3%] left-[75.0%] -translate-x-1/2 -translate-y-1/2 w-[35%] aspect-square rounded-full bg-background blur-2xl z-20"
-          style={{ opacity: maskOpacity }}
-        />
-
-        {/* 2. Holographic Overlay Container */}
+        {/* Holographic Microphone Overlay Container */}
         <div 
-          className="absolute top-[53.3%] left-[75.0%] -translate-x-1/2 -translate-y-1/2 w-[35%] aspect-square z-30"
+          className="absolute top-[53.3%] left-[75.0%] -translate-x-1/2 -translate-y-1/2 w-[60%] aspect-square z-30"
         >
-          {/* Closed Fist SVG */}
-          <motion.svg
-            viewBox="0 0 100 100"
-            className="absolute inset-0 w-full h-full text-primary"
-            style={{
-              opacity: fistOpacity,
-              filter: "drop-shadow(0 0 8px var(--color-primary))",
-            }}
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            {/* Wrist/Arm */}
-            <path d="M10 55 L25 53 C28 50, 32 48, 36 48 L48 48" />
-            <path d="M12 70 L28 68 C32 68, 36 70, 39 73 L42 75" />
-            {/* Back of palm */}
-            <path d="M48 48 C55 48, 62 50, 65 58 C67 62, 65 67, 60 70" />
-            {/* Wrapped fingers */}
-            <path d="M40 70 C40 73, 44 75, 47 73" />
-            <path d="M47 71 C47 74, 51 76, 54 74" />
-            <path d="M54 71 C54 74, 58 76, 61 74" />
-            <path d="M61 71 C61 74, 65 76, 67 73" />
-            {/* Thumb */}
-            <path d="M38 48 C36 44, 42 40, 46 43 C49 45, 48 50, 44 52 L40 54" />
-          </motion.svg>
-
-          {/* Open Hand SVG */}
-          <motion.svg
-            viewBox="0 0 100 100"
-            className="absolute inset-0 w-full h-full text-primary"
-            style={{
-              opacity: openHandOpacity,
-              filter: "drop-shadow(0 0 8px var(--color-primary))",
-            }}
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            {/* Wrist/Arm */}
-            <path d="M10 55 L25 53 C28 50, 32 48, 36 48 L48 48" />
-            <path d="M12 70 L28 68 C32 68, 36 70, 39 73 L42 75" />
-            {/* Open Palm */}
-            <path d="M48 48 C55 48, 62 50, 65 58" />
-            {/* Extended fingers pointing down/open */}
-            <path d="M65 58 L78 68" />
-            <path d="M63 60 L75 72" />
-            <path d="M60 62 L71 75" />
-            <path d="M57 64 L67 77" />
-            {/* Open Thumb */}
-            <path d="M38 48 C36 42, 44 38, 48 41 C52 44, 50 49, 45 52" />
-          </motion.svg>
-
           {/* Microphone SVG */}
           <motion.svg
             viewBox="0 0 100 100"
