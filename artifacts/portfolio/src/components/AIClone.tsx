@@ -87,13 +87,13 @@ export function AIClone() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.9, delay: 0.2 }}
         >
-          <div className="rounded-3xl border border-primary/20 bg-black/40 backdrop-blur-xl overflow-hidden shadow-[0_0_60px_rgba(17,51,71,0.1)]">
+          <div className="rounded-3xl border border-primary/20 bg-black/40 backdrop-blur-xl overflow-hidden shadow-[0_0_60px_rgba(115,152,173,0.1)]">
             <div className="flex items-center gap-3 px-6 py-4 border-b border-white/5 bg-primary/5">
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="font-mono text-[10px] tracking-[0.3em] text-primary/70">AI CLONE — PRATHAMESH KAMBLI v1.0</span>
             </div>
 
-            <div className="h-80 overflow-y-auto p-6 flex flex-col gap-4 scroll-smooth" style={{ scrollbarWidth: "thin", scrollbarColor: "rgba(17,51,71,0.2) transparent" }}>
+            <div className="h-80 overflow-y-auto p-6 flex flex-col gap-4 scroll-smooth" style={{ scrollbarWidth: "thin", scrollbarColor: "rgba(115,152,173,0.2) transparent" }}>
               <AnimatePresence>
                 {messages.map((msg, i) => (
                   <motion.div
